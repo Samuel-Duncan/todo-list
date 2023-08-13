@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" defer></script>
+  <title>ToDo List</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title-primary" class="title">ToDo List</h1>
+      <div class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+    
+    <aside class="sidebar">
+      <h2 id="title-secondary" class="title">Projects</h2>
+
+      <nav class="nav">
+        <ul class="menu-container">
+          <li id="project-default" class="menu-item active">
+            <a href="#">Default</a>
+          </li>
+          <li id="project-${project1}" class="menu-item">
+            <a href="#">Project 1</a>
+          </li>
+          <li id="project-${project2}" class="menu-item">
+            <a href="#">Project 2</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="new-project-button" class="button-primary" type="button">New Project</button>
+    </aside>
+
+
+
+    <main class="main">
+
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+  </div>
+</body>
+</html>
