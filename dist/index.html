@@ -9,7 +9,16 @@
 <body>
   <div class="container">
     <header class="header">
-      <h1 id="title-primary" class="title">ToDo List</h1>
+      <div class="header-title-container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checklist" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"></path>
+          <path d="M14 19l2 2l4 -4"></path>
+          <path d="M9 8h4"></path>
+          <path d="M9 12h2"></path>
+        </svg>
+        <h1 id="title-primary" class="title">ToDo List</h1>
+      </div>
       <div class="menu-icon">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -32,7 +41,7 @@
       </nav>
 
       <button id="new-project-button" class="button-primary" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="22" height="22" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M12 5l0 14"></path>
           <path d="M5 12l14 0"></path>
@@ -48,7 +57,7 @@
         <h2 id="title-secondary" class="title">Today</h2>
         <div class="button-container">
           <button id="new-todo-button" class="button-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="22" height="22" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M12 5l0 14"></path>
               <path d="M5 12l14 0"></path>
@@ -88,7 +97,7 @@
         <h2 id="title-secondary" class="title">Project 1</h2>
         <div class="button-container">
           <button id="new-todo-button" class="button-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="22" height="22" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M12 5l0 14"></path>
               <path d="M5 12l14 0"></path>
@@ -96,7 +105,7 @@
           <span>ToDo</span>
           </button>
           <button id="delete-project-button" class="button-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="22" height="22" viewBox="0 0 26 26" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M4 7l16 0"></path>
               <path d="M10 11l0 6"></path>
@@ -111,7 +120,9 @@
     </main>
 
     <footer class="footer">
-
+      <div class="footer-content">
+        <p>Samuel Duncan | The Odin Project | Github</p>
+      </div>
     </footer>
   </div>
 </body>
