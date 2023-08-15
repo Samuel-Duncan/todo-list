@@ -56,7 +56,7 @@ a {
 button {
   text-decoration: none;
   font-size: var(--small-font-size);
-  font-weight: 600;
+  font-weight: 500;
   border-radius: var(--border-radius-small);
   padding: .6em .6em;
   cursor: pointer;
@@ -67,13 +67,13 @@ button {
   margin-top: var(--sidebar-margin);
 }
 
-.button-primary {
+.button-primary, .button-primary:active {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border-color: var(--primary-color);
 }
 
-.button-secondary {
+.button-secondary, .button-primary:active {
   color: var(--secondary-color);
   background-color: var(--tertiary-color);
   border-color: var(--primary-color);
@@ -196,7 +196,19 @@ button {
   background-color: var(--secondary-color);
   padding: 1em;
   border-radius: var(--border-radius-big);
-  margin-top: 2em;
+  margin-top: 1.75em;
+}
+
+.todo-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+
+input[type="checkbox"]:checked {
+  border-color: var(--tertiary-color);
+  box-shadow: 0 0 0 0.2em var(--tertiary-color);
+  border-radius: var(--border-radius-small);
 }
 
 .content-button-container {
@@ -213,6 +225,78 @@ button {
   display: block;
 }
 
+input:not([type="checkbox"]) {
+  line-height: 2em;
+  border-radius: var(--border-radius-small);
+  margin-top: 1em;
+}
+
+input:focus {
+  transition: var(--transition-fast);
+  outline: var(--tertiary-color); /* Remove the default outline */
+  border-color: var(--tertiary-color); /* Change this to your desired color */
+  box-shadow: 0 0 2px 2px var(--tertiary-color);
+}
+
+.input-container input {
+  width: 100%;
+}
+
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.form-container.active {
+  display: block;
+}
+
+.form {
+  width: 25%;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 1.5em;
+  border-radius: var(--border-radius-big);
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.form.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-legend {
+  display: flex;
+  align-self: center;
+  font-size: var(--medium-font-size);
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--tertiary-color);
+  padding-bottom: .3em;
+}
+
+.form-button-container {
+  display: flex;
+  gap: 1em;
+  align-self: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .footer {
   grid-area: footer;
   background-color: var(--tertiary-color);
@@ -223,12 +307,16 @@ button {
   margin: 0 auto;
 }
 
-/* @media (max-width: 1024px) {
-  .sidebar {
+@media (max-width: 1300px) {
+  /* .sidebar {
     max-width: 200px;
     transition: var(--transition-fast);
+  } */
+
+  .form {
+    width: 50%;
   }
-} */
+}
 
 @media (max-width: 768px) {
   .container {
@@ -260,5 +348,9 @@ button {
     right: 0px;
     width: 175px;
     height: calc(100% - 83px);
+  }
+
+  .form {
+    width: 75%;
   }
 }
