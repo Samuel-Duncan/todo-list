@@ -93,44 +93,6 @@
             </button>
           </div>
         </div>
-        
-        <div class="form-container">
-          <form id="project_form" class="form" action="" method="post">
-            <legend class="form-legend">New Project</legend>
-            <div id="project-input-container" class="input-container">
-              <div class="project-input-container">
-                <label for="project_name" class="label">Project Name:</label>
-                <input id="project_name" type="text" name="project_name">
-              </div>
-            </div>
-          
-            <div class="form-button-container">
-              <button type="submit" id="project-submit-button" class="button-primary">Submit</button>
-              <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
-            </div>
-          </form>
-        </div>
-        
-        <div class="form-container active">
-          <form action="" id="todo_form" class="form active" method="post">
-            <legend class="form-legend">New ToDo</legend>
-            <div class="input-container">
-              <div id="todo-input-container">
-                <label for="todo_name" class="label">ToDo:</label>
-                <input id="todo_name" type="text" name="todo_name">
-              </div>
-          
-              <div id="date-input-container">
-                <label for="due_date" class="label">Date:</label>
-                <input type="date" id="due_date" name="due_date">
-              </div>
-            </div>
-            <div class="form-button-container">
-              <button type="submit" id="project-submit-button" class="button-primary">Submit</button>
-              <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
-            </div>
-          </form>
-        </div>
       </div>
       
       <div class="tabs-content" data-tab="${project.name}">
@@ -157,8 +119,48 @@
           </button>
         </div>
       </div>
+      
+      <!-- FORMS -->
+      <div id="project-form-container" class="form-container">
+        <form id="project_form" class="form" action="" method="post">
+          <legend class="form-legend">New Project</legend>
+          <div id="project-input-container" class="input-container">
+            <div class="project-input-container">
+              <label for="project_name" class="label">Project Name:</label>
+              <input id="project_name" class="first-input" type="text" name="project_name">
+            </div>
+          </div>
+        
+          <div class="form-button-container">
+            <button type="submit" id="project-submit-button" class="button-primary">Submit</button>
+            <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+      
+      <div id="todo-form-container" class="form-container">
+        <form action="" id="todo_form" class="form" method="post">
+          <legend class="form-legend">New ToDo</legend>
+          <div class="input-container">
+            <div id="todo-input-container">
+              <label for="todo_name" class="label">ToDo:</label>
+              <input id="todo_name" class="first-input" type="text" name="todo_name">
+            </div>
+        
+            <div id="date-input-container">
+              <label for="due_date" class="label">Date:</label>
+              <input type="date" id="due_date" name="due_date">
+            </div>
+          </div>
+          <div class="form-button-container">
+            <button type="submit" id="todo-submit-button" class="button-primary">Submit</button>
+            <button type="reset" id="todo-cancel-button" class="button-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
     </main>
-
+    
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-content">
         <p>Samuel Duncan | The Odin Project | Github</p>

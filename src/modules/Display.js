@@ -33,4 +33,52 @@ export default class Display {
       });
     });
   }
+
+  static openForms() {
+    const newProjectButton = document.getElementById('new-project-button');
+    const newToDoButton = document.querySelectorAll('#new-todo-button');
+    const projectForm = document.getElementById('project_form');
+    const toDoForm = document.getElementById('todo_form');
+    const projectFormContainer = document.getElementById(
+      'project-form-container',
+    );
+    const toDoFormContainer = document.getElementById('todo-form-container');
+
+    newProjectButton.addEventListener('click', () => {
+      projectForm.classList.toggle('active');
+      projectFormContainer.classList.toggle('active');
+    });
+
+    newToDoButton.forEach((toDoButton) => {
+      toDoButton.addEventListener('click', () => {
+        toDoForm.classList.toggle('active');
+        toDoFormContainer.classList.toggle('active');
+      });
+    });
+
+    Display.closeForms();
+  }
+
+  static closeForms() {
+    const projectCancelButton = document.getElementById(
+      'project-cancel-button',
+    );
+    const toDoCancelButton = document.getElementById('todo-cancel-button');
+    const projectForm = document.getElementById('project_form');
+    const toDoForm = document.getElementById('todo_form');
+    const projectFormContainer = document.getElementById(
+      'project-form-container',
+    );
+    const toDoFormContainer = document.getElementById('todo-form-container');
+
+    const formCloser = (element, form, container) => {
+      element.addEventListener('click', () => {
+        form.classList.toggle('active');
+        container.classList.toggle('active');
+      });
+    };
+
+    formCloser(projectCancelButton, projectForm, projectFormContainer);
+    formCloser(toDoCancelButton, toDoForm, toDoFormContainer);
+  }
 }

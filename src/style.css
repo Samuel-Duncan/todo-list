@@ -11,6 +11,7 @@
   --transition-slow: .3s linear;
   --sidebar-margin: 20px;
   --container-padding: 1em 1.5em;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-family);
   background-color: var(--primary-color);
 }
 
@@ -226,9 +227,12 @@ input[type="checkbox"]:checked {
 }
 
 input:not([type="checkbox"]) {
-  line-height: 2em;
+  font-size: var(--small-font-size);
   border-radius: var(--border-radius-small);
-  margin-top: 1em;
+  margin-top: .5em;
+  box-sizing: border-box;
+  padding: .5em;
+  font-family: var(--font-family);
 }
 
 input:focus {
@@ -258,10 +262,11 @@ input:focus {
 }
 
 .form {
-  width: 25%;
+  width: 20%;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   padding: 1.5em;
+  border: 2px solid var(--tertiary-color);
   border-radius: var(--border-radius-big);
   position: fixed;
   z-index: 999;
@@ -280,9 +285,8 @@ input:focus {
   display: flex;
   align-self: center;
   font-size: var(--medium-font-size);
-  margin-bottom: 1em;
   border-bottom: 2px solid var(--tertiary-color);
-  padding-bottom: .3em;
+  margin-bottom: .5em;
 }
 
 .form-button-container {
@@ -307,14 +311,14 @@ input:focus {
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   /* .sidebar {
     max-width: 200px;
     transition: var(--transition-fast);
   } */
 
   .form {
-    width: 50%;
+    width: 35%;
   }
 }
 
