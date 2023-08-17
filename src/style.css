@@ -59,7 +59,7 @@ button {
   font-size: var(--small-font-size);
   font-weight: 500;
   border-radius: var(--border-radius-small);
-  padding: .6em .6em;
+  padding: .6em .9em;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -200,7 +200,7 @@ button {
   margin-top: 1.75em;
 }
 
-.todo-info {
+.todo-container {
   display: flex;
   flex-wrap: wrap;
   gap: .5em;
@@ -246,7 +246,7 @@ input:focus {
   width: 100%;
 }
 
-.form-container {
+.form-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -257,12 +257,12 @@ input:focus {
   display: none;
 }
 
-.form-container.active {
+.form-background.active {
   display: block;
 }
 
 .form {
-  width: 20%;
+  width: 25%;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   padding: 1.5em;
@@ -318,7 +318,7 @@ input:focus {
   } */
 
   .form {
-    width: 35%;
+    width: 40%;
   }
 }
 
@@ -356,5 +356,13 @@ input:focus {
 
   .form {
     width: 75%;
+  }
+
+  .content-button-container * {
+    padding: .2em .3em;
+  }
+  
+  #todo-divider {
+    display: none;
   }
 }

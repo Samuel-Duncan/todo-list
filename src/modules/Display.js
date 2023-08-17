@@ -10,9 +10,10 @@ export default class Display {
   }
 
   static setUpTabs() {
-    const menuItem = document.querySelectorAll('.menu-item');
+    const menuItems = document.querySelectorAll('.menu-item');
     const contentItems = document.querySelectorAll('.tabs-content');
-    menuItem.forEach((item) => {
+
+    menuItems.forEach((item) => {
       item.addEventListener('click', () => {
         const content = document.querySelector('.main');
         const menuItemName = item.dataset.forTab;
@@ -20,7 +21,7 @@ export default class Display {
           `.tabs-content[data-tab="${menuItemName}"]`,
         );
 
-        menuItem.forEach((button) => {
+        menuItems.forEach((button) => {
           button.classList.remove('active');
         });
 
@@ -32,6 +33,15 @@ export default class Display {
         itemToActivate.classList.add('active');
       });
     });
+
+    Display.responsiveMenu();
+  }
+
+  static toggleForms(element, form, container) {
+    element.addEventListener('click', () => {
+      form.classList.toggle('active');
+      container.classList.toggle('active');
+    });
   }
 
   static openForms() {
@@ -40,23 +50,15 @@ export default class Display {
     const projectForm = document.getElementById('project_form');
     const toDoForm = document.getElementById('todo_form');
     const projectFormContainer = document.getElementById(
-      'project-form-container',
+      'project-form-background',
     );
-    const toDoFormContainer = document.getElementById('todo-form-container');
+    const toDoFormContainer = document.getElementById('todo-form-background');
 
-    newProjectButton.addEventListener('click', () => {
-      projectForm.classList.toggle('active');
-      projectFormContainer.classList.toggle('active');
-    });
+    Display.toggleForms(newProjectButton, projectForm, projectFormContainer);
 
     newToDoButton.forEach((toDoButton) => {
-      toDoButton.addEventListener('click', () => {
-        toDoForm.classList.toggle('active');
-        toDoFormContainer.classList.toggle('active');
-      });
+      Display.toggleForms(toDoButton, toDoForm, toDoFormContainer);
     });
-
-    Display.closeForms();
   }
 
   static closeForms() {
@@ -67,18 +69,19 @@ export default class Display {
     const projectForm = document.getElementById('project_form');
     const toDoForm = document.getElementById('todo_form');
     const projectFormContainer = document.getElementById(
-      'project-form-container',
+      'project-form-background',
     );
-    const toDoFormContainer = document.getElementById('todo-form-container');
+    const toDoFormContainer = document.getElementById('todo-form-background');
 
-    const formCloser = (element, form, container) => {
-      element.addEventListener('click', () => {
-        form.classList.toggle('active');
-        container.classList.toggle('active');
-      });
-    };
+    Display.toggleForms(projectCancelButton, projectForm, projectFormContainer);
+    Display.toggleForms(toDoCancelButton, toDoForm, toDoFormContainer);
+    Display.toggleForms(
+      projectFormContainer,
+      projectForm,
+      projectFormContainer,
+    );
+    Display.toggleForms(toDoFormContainer, toDoForm, toDoFormContainer);
 
-    formCloser(projectCancelButton, projectForm, projectFormContainer);
-    formCloser(toDoCancelButton, toDoForm, toDoFormContainer);
+    Display.openForms();
   }
 }

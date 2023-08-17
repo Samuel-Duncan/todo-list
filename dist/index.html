@@ -66,10 +66,10 @@
           </button>
         </div>
         <div class="content-item-container">
-          <div class="todo-info">
+          <div class="todo-container">
             <input type="checkbox" id="mark_complete" class="checkbox" name="mark_complete">
             <span>take the dog out for school</span>
-            <span>|</span>
+            <span id="todo-divider">|</span>
             <span>11/21/2023</span>
           </div>
           <div class="content-button-container">
@@ -121,13 +121,13 @@
       </div>
       
       <!-- FORMS -->
-      <div id="project-form-container" class="form-container">
-        <form id="project_form" class="form" action="" method="post">
+      <div id="project-form-background" class="form-background"></div>
+      <form id="project_form" class="form" action="" method="post">
           <legend class="form-legend">New Project</legend>
           <div id="project-input-container" class="input-container">
             <div class="project-input-container">
               <label for="project_name" class="label">Project Name:</label>
-              <input id="project_name" class="first-input" type="text" name="project_name">
+              <input id="project_name" class="first-input" type="text" name="project_name" autofocus>
             </div>
           </div>
         
@@ -136,28 +136,26 @@
             <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
           </div>
         </form>
-      </div>
       
-      <div id="todo-form-container" class="form-container">
-        <form action="" id="todo_form" class="form" method="post">
-          <legend class="form-legend">New ToDo</legend>
-          <div class="input-container">
-            <div id="todo-input-container">
-              <label for="todo_name" class="label">ToDo:</label>
-              <input id="todo_name" class="first-input" type="text" name="todo_name">
-            </div>
-        
-            <div id="date-input-container">
-              <label for="due_date" class="label">Date:</label>
-              <input type="date" id="due_date" name="due_date">
-            </div>
+      <div id="todo-form-background" class="form-background"></div>
+      <form action="" id="todo_form" class="form" method="post">
+        <legend class="form-legend">New ToDo</legend>
+        <div class="input-container">
+          <div id="todo-input-container">
+            <label for="todo_name" class="label">ToDo:</label>
+            <input id="todo_name" class="first-input" type="text" name="todo_name" autofocus>
           </div>
-          <div class="form-button-container">
-            <button type="submit" id="todo-submit-button" class="button-primary">Submit</button>
-            <button type="reset" id="todo-cancel-button" class="button-secondary">Cancel</button>
+      
+          <div id="date-input-container">
+            <label for="due_date" class="label">Date:</label>
+            <input type="date" id="due_date" name="due_date">
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="form-button-container">
+          <button type="submit" id="todo-submit-button" class="button-primary">Submit</button>
+          <button type="reset" id="todo-cancel-button" class="button-secondary">Cancel</button>
+        </div>
+      </form>
     </main>
     
     <!-- FOOTER -->
