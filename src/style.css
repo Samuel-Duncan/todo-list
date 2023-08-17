@@ -9,7 +9,7 @@
   --border-radius-big: 1rem;
   --transition-fast: .2s linear;
   --transition-slow: .3s linear;
-  --sidebar-margin: 20px;
+  --sidebar-margin: 1.2em;
   --container-padding: 1em 1.5em;
   --font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -57,7 +57,6 @@ a {
 button {
   text-decoration: none;
   font-size: var(--small-font-size);
-  font-weight: 500;
   border-radius: var(--border-radius-small);
   padding: .6em .9em;
   cursor: pointer;
@@ -96,7 +95,7 @@ button {
 
 #new-project-button {
   margin: 0 auto;
-  margin-top: 1.25em;
+  margin-top: 2em;
 }
 
 .container {
