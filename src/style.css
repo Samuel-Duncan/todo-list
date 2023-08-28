@@ -218,7 +218,13 @@ button {
   gap: .5em;
 }
 
+input[type="checkbox"] {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 input[type="checkbox"]:checked {
+  transition: var(--transition-fast);
   border-color: var(--tertiary-color);
   box-shadow: 0 0 0 0.2em var(--tertiary-color);
   border-radius: var(--border-radius-small);
@@ -241,7 +247,7 @@ input:not([type="checkbox"]) {
   font-family: var(--font-family);
 }
 
-input:focus {
+input:focus:not([type="checkbox"]) {
   transition: var(--transition-fast);
   outline: var(--tertiary-color); /* Remove the default outline */
   border-color: var(--tertiary-color); /* Change this to your desired color */
