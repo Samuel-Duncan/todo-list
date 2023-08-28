@@ -58,7 +58,7 @@ button {
   text-decoration: none;
   font-size: var(--small-font-size);
   border-radius: var(--border-radius-small);
-  padding: .6em .9em;
+  padding: .5em .8em;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -96,6 +96,16 @@ button {
 #new-project-button {
   margin: 0 auto;
   margin-top: 2em;
+}
+
+.content-button-container {
+  display: flex;
+  margin-top: -1em;
+  gap: 10px;
+}
+
+.content-button-container * {
+  padding: .2em .3em;
 }
 
 .container {
@@ -209,12 +219,6 @@ input[type="checkbox"]:checked {
   border-color: var(--tertiary-color);
   box-shadow: 0 0 0 0.2em var(--tertiary-color);
   border-radius: var(--border-radius-small);
-}
-
-.content-button-container {
-  display: flex;
-  margin-top: -1em;
-  gap: 10px;
 }
 
 .tabs-content {
@@ -358,7 +362,7 @@ input:focus {
   }
 
   .content-button-container * {
-    padding: .2em .3em;
+    padding: .15em .2em;
   }
   
   #todo-divider {
