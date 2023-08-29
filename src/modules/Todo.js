@@ -23,14 +23,18 @@ export default class Todo {
   }
 
   setDueDate() {
-    this.dueDate = this.getDateFormatted();
+    this.dueDate = this.formatDate();
   }
 
-  getDateFormatted() {
+  formatDate() {
     return format(new Date(this.dueDate, 'MM/dd/yyy'));
   }
 
-  toggleComplete() {
+  getCompletionStatus() {
+    return this.isComplete;
+  }
+
+  setCompletionStatus() {
     this.isComplete = !this.isComplete;
   }
 }

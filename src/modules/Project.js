@@ -25,20 +25,20 @@ export default class Project {
   }
 
   getToDo(toDoTitle) {
-    return this.toDos.find((toDo) => toDo.getName() === toDoTitle);
+    return this.toDos.find((toDo) => toDo.getTitle() === toDoTitle);
   }
 
   isOnToDoList(toDoTitle) {
-    return this.toDos.some((toDo) => toDo.title === toDoTitle.title);
+    return this.toDos.some((toDo) => toDo.getTitle() === toDoTitle);
   }
 
   addToDo(newToDo) {
-    if (!this.isOnToDoList(newToDo)) {
-      this.toDos.push();
+    if (!this.isOnToDoList(newToDo.getTitle())) {
+      this.toDos.push(newToDo);
     }
   }
 
   deleteToDo(toDoTitle) {
-    this.toDos = this.toDos.filter((toDo) => toDo.title !== toDoTitle.title);
+    this.toDos = this.toDos.filter((toDo) => toDo.getTitle() !== toDoTitle);
   }
 }
