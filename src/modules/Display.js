@@ -59,6 +59,8 @@ export default class Display {
     newToDoButton.forEach((toDoButton) => {
       Display.toggleForms(toDoButton, toDoForm, toDoFormContainer);
     });
+
+    Display.setUpTabs();
   }
 
   static closeForms() {
