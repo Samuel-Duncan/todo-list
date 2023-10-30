@@ -1,6 +1,3 @@
-// Generate todo constructor class
-// - properties: title, dueDate
-// - methods: get/set todos, get/set dueDate, format dueDate, toggle complete
 import format from 'date-fns/format';
 
 export default class Todo {

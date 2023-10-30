@@ -69,26 +69,27 @@ button {
 }
 
 .button-primary, .button-primary:active {
+  transition: var(--transition-fast);
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border-color: var(--primary-color);
 }
 
 .button-secondary, .button-primary:active {
+    transition: var(--transition-fast);
   color: var(--secondary-color);
   background-color: var(--tertiary-color);
   border-color: var(--primary-color);
 }
 
 .button-primary:hover {
-  transition: var(--transition-fast);
+
   color: var(--secondary-color);
   background-color: var(--tertiary-color);
   border-color: var(--primary-color);
 }
 
 .button-secondary:hover {
-  transition: var(--transition-fast);
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border-color: var(--primary-color);
@@ -169,6 +170,8 @@ button {
 
 .menu-item {
   font-size: var(--small-font-size);
+  border-radius: var(--border-radius-small);
+  transition: all var(--transition-fast);
 }
 
 .menu-item:first-of-type {
@@ -178,14 +181,12 @@ button {
 .menu-item a {
   display: block;
   width: 100%;
-  transition: var(--transition-fast);
   padding: .7em 0px;
 }
 
 .menu-item:hover,
 .menu-item.active {
   color: var(--secondary-color);
-  border-radius: var(--border-radius-small);
   background-color: var(--tertiary-color);
 }
 
@@ -198,6 +199,10 @@ button {
   display: flex;
   justify-content: space-between;
   margin-top: -.7em;
+}
+
+.button-container button {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .content-item-container {
@@ -275,6 +280,7 @@ input:focus:not([type="checkbox"]) {
 }
 
 .form {
+  display: none;
   width: 25%;
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -286,7 +292,6 @@ input:focus:not([type="checkbox"]) {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 .form.active {

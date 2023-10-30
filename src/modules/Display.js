@@ -1,3 +1,7 @@
+import Todo from './Todo';
+import Project from './Project';
+import Storage from './Storage';
+
 export default class Display {
   static responsiveMenu() {
     const menuIcon = document.querySelector('.menu-icon');
@@ -15,7 +19,7 @@ export default class Display {
 
     menuItems.forEach((item) => {
       item.addEventListener('click', () => {
-        const content = document.querySelector('.main');
+        const content = document.querySelector('.content');
         const menuItemName = item.dataset.forTab;
         const itemToActivate = content.querySelector(
           `.tabs-content[data-tab="${menuItemName}"]`,
@@ -85,5 +89,28 @@ export default class Display {
     Display.toggleForms(toDoFormContainer, toDoForm, toDoFormContainer);
 
     Display.openForms();
+  }
+
+  static loadProjects() {
+    Storage.getList()
+      .getProjects()
+      .forEach((project) => {
+        if (project.name !== 'Today') {
+          Display.createProject(project.name);
+        }
+      });
+
+    Display.initAddProjectButtons();
+  }
+
+  static loadToDos(projectName) {
+    Storage.getList()
+      .getProject(projectName)
+      .getToDos()
+      .forEach((toDo) => Display.createToDo(toDo.name, toDo.dueDate));
+
+    if (projectName !== 'Today') {
+      Display.initAddToDoButtons();
+    }
   }
 }
