@@ -78,6 +78,8 @@ export default class Display {
       'project-form-background',
     );
     const toDoFormContainer = document.getElementById('todo-form-background');
+    const closeProjectBtn = document.getElementById('close-project-btn');
+    const closeToDoBtn = document.getElementById('close-todo-btn');
 
     Display.toggleForms(projectCancelButton, projectForm, projectFormContainer);
     Display.toggleForms(toDoCancelButton, toDoForm, toDoFormContainer);
@@ -87,6 +89,8 @@ export default class Display {
       projectFormContainer,
     );
     Display.toggleForms(toDoFormContainer, toDoForm, toDoFormContainer);
+    Display.toggleForms(closeProjectBtn, projectForm, projectFormContainer);
+    Display.toggleForms(closeToDoBtn, toDoForm, toDoFormContainer);
 
     Display.openForms();
   }

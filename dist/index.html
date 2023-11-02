@@ -123,18 +123,21 @@
       <!-- FORMS -->
       <div id="project-form-background" class="form-background"></div>
       <form id="project_form" class="form" action="" method="post">
-          <legend class="form-legend">New Project</legend>
-          <div id="project-input-container" class="input-container">
-            <div class="project-input-container">
-              <label for="project_name" class="label">Project Name:</label>
-              <input id="project_name" class="first-input" type="text" name="project_name" autofocus>
-            </div>
+        <legend class="form-legend">New Project</legend>
+        <div id="project-input-container" class="input-container">
+          <div class="project-input-container">
+            <label for="project_name" class="label">Project Name:</label>
+            <input id="project_name" class="first-input" type="text" name="project_name" autofocus>
           </div>
-        
-          <div class="form-button-container">
-            <button type="submit" id="project-submit-button" class="button-primary">Submit</button>
-            <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
-          </div>
+        </div>
+      
+        <div class="form-button-container">
+          <button type="submit" id="project-submit-button" class="button-primary">Submit</button>
+          <button type="reset" id="project-cancel-button" class="button-secondary">Cancel</button>
+        </div>
+        <button type="reset" id="close-project-btn" class="close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
         </form>
       
       <div id="todo-form-background" class="form-background"></div>
@@ -155,6 +158,9 @@
           <button type="submit" id="todo-submit-button" class="button-primary">Submit</button>
           <button type="reset" id="todo-cancel-button" class="button-secondary">Cancel</button>
         </div>
+        <button type="reset" id="close-todo-btn" class="close-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </form>
     </main>
     

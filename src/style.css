@@ -76,23 +76,22 @@ button {
 }
 
 .button-secondary, .button-primary:active {
-    transition: var(--transition-fast);
+  transition: var(--transition-fast);
   color: var(--secondary-color);
   background-color: var(--tertiary-color);
   border-color: var(--primary-color);
 }
 
 .button-primary:hover {
-
   color: var(--secondary-color);
-  background-color: var(--tertiary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 .button-secondary:hover {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 #new-project-button {
@@ -119,6 +118,8 @@ button {
   grid-template-columns: 300px 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .header {
@@ -165,7 +166,7 @@ button {
 }
 
 .sidebar.active {
-  display: block;
+  right: 0px;
 }
 
 .menu-item {
@@ -319,6 +320,16 @@ input:focus:not([type="checkbox"]) {
   gap: 1em;
 }
 
+.close-btn {
+  position: absolute;
+  color: var(--primary-color);
+  top: 0;
+  right: 0;
+  transform: translate(15%, -55%);
+  background: none;
+  border: none;
+}
+
 .footer {
   grid-area: footer;
   background-color: var(--tertiary-color);
@@ -365,11 +376,11 @@ input:focus:not([type="checkbox"]) {
   .sidebar {
     box-sizing: border-box;
     margin: 0;
-    display: none;
     position: absolute;
+    transition: right, .5s, ease-in-out, .15s;
     top: 83px;
-    right: 0px;
-    width: 175px;
+    right: -200px;
+    width: 200px;
     height: calc(100% - 83px);
     box-shadow: -6px 0px 6px -2px rgba(0, 0, 0, 0.16);
   }
